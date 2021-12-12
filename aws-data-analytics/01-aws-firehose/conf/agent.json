@@ -1,7 +1,7 @@
 {
     "cloudwatch.emitMetrics": true,
-    "kinesis.endpoint": "kinesis.ap-south-1.amazonaws.com",
-    "firehose.endpoint": "",
+    "kinesis.endpoint": "",
+    "firehose.endpoint": "firehose.ap-south-1.amazonaws.com",
   
     "flows": [
       {
