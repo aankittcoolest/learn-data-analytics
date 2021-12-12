@@ -39,7 +39,7 @@ resource "aws_security_group" "project-iac-sg" {
 
 resource "aws_iam_role" "ec2_role" {
   name               = "admin-role"
-  assume_role_policy = file("${path.module}/conf/assumeRolePolicy.json")
+  assume_role_policy = file("${path.module}/conf/assumeRoleEC2Policy.json")
 }
 
 resource "aws_iam_instance_profile" "admin_profile" {
