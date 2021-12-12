@@ -1,4 +1,12 @@
 
+## References
+- Setting up IAM roles
+https://kulasangar.medium.com/creating-and-attaching-an-aws-iam-role-with-a-policy-to-an-ec2-instance-using-terraform-scripts-aa85f3e6dfff
+
+- Invoking start_up script in EC2 instance
+https://fabianlee.org/2021/05/28/terraform-invoking-a-startup-script-for-an-ec2-aws_instance/
+
+
 ## Configure kinesis by terraform
 
 - In current directory run the following commands.
@@ -22,4 +30,13 @@ unzip LogGenerator.zip
 chmod a+x LogGenerator.py
 sudo mkdir /var/log/cadabra
 
+# Configure aws-kinesis
+wget https://raw.githubusercontent.com/aankittcoolest/learn-data-analytics/main/aws-data-analytics/aws-kinesis/conf/agent.json
+
+sudo mv agent.json /etc/aws-kinesis
+sudo service aws-kinesis-agent restart
+sudo chkconfig aws-kinesis-agent on
+sudo ./LogGenerator.py
+
+# tail -f /var/log/aws-kinesis-agent/aws-kinesis-agent.log
 ```

@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_kinesis_stream" "test_stream" {
-  name             = "terraform-kinesis-test"
+  name             = "CadabraOrders"
   retention_period = 24
 
   shard_level_metrics = [
