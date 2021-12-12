@@ -9,8 +9,8 @@ unzip LogGenerator.zip
 chmod a+x LogGenerator.py
 sudo mkdir /var/log/cadabra
 
-# Configure aws-kinesis
-wget https://raw.githubusercontent.com/aankittcoolest/learn-data-analytics/main/aws-data-analytics/aws-kinesis/conf/agent.json
+# Configure aws-firehose
+wget https://raw.githubusercontent.com/aankittcoolest/learn-data-analytics/main/aws-data-analytics/01-aws-firehose/conf/agent.json
 
 sudo mv agent.json /etc/aws-kinesis
 sudo service aws-kinesis-agent restart
